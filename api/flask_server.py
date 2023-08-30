@@ -3,6 +3,7 @@ import requests
 
 app = Flask(__name__)
 
+
 def encrypt_url(key, image_url):
     # Fetch the image from the URL
     response = requests.get(image_url)
