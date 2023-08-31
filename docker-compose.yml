@@ -1,0 +1,10 @@
+version: '3'
+services:
+  flask_app:
+    build:
+      context: .
+      dockerfile: Dockerfile  # 指向您的Dockerfile路径
+    ports:
+      - "5000:5000"  # 将容器的5000端口映射到主机的5000端口
+    volumes:
+      - ./api:/app  # 将主机的api目录挂载到容器的/app目录
